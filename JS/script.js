@@ -69,10 +69,11 @@ function generatePassword(passLength, lower, upper, numerals, specials) {
 function writePassword() {
   var passLength = prompt("Between 8 to 128 charachters for your password, please");
   // find a way to write 'if passLength 7< and >129, then run rest of code as long as that fits
- // if (passLength < 8) {
-   // alert("please try again")
- // }
- // return  
+  if (passLength < 8) {
+    alert("please try again")
+    return
+  }
+    
   var lower = confirm("Press 'ok' to include lowercase letters in your password");
   var upper = confirm("Press 'ok' to include uppercase letters in your password");
   var numerals = confirm("Press 'ok' to include numbers in your password");
